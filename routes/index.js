@@ -25,7 +25,7 @@ router.post("/register", async (req, res) => {
 });
 
 // Login İşlemi
-router.post("/", async (req, res) => {
+router.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
     if (user && (await bcrypt.compare(password, user.password))) {
