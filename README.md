@@ -11,7 +11,7 @@ This project aims to provide basic knowledge about numbers and shapes to childre
 ---
 
 ## Proje Linki / Project Link
-**Live URL:** [Shapes and Numbers AR](https://software-engineering-current-topics.vercel.app/)
+**Live URL:** [Shapes and Numbers AR](https://ymh-g-ncel-konular-vize.vercel.app/)
 
 ---
 
