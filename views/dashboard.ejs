@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number AR Oyunu</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #0074D9;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .main-content {
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-description, .links-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .project-description h2,
+        .links-section h2 {
+            color: #0074D9;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .links-section .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .links-section .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #0074D9;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .links-section .btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #001f3f;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Shapes And Numbers
+</header>
+
+<main>
+    <div class="main-content">
+        <div class="hero-section">
+            <img src="/images/numbers.png" alt="Proje Görseli">
+        </div>
+
+        <div class="project-description">
+            <h2>Hakkında</h2>
+            <p>Benim geliştirdiğim "Shapes And Numbers" adlı artırılmış gerçeklik (AR) oyunu, sayıları ve şekilleri eğlenceli bir şekilde öğretmek için tasarlandı. Bu oyunla, kullanıcılar bir sayı ya da şeklin üzerine tıklayarak o nesne hakkında bilgi alabiliyor ve matematiksel kavramları interaktif bir şekilde öğreniyor. Özellikle asal sayılar gibi önemli kavramları öğretmeyi hedefleyen bu AR oyunu, matematiği sevdirmek ve öğrenme sürecini daha keyifli hale getirmek için burada.</p>
+        </div>
+
+        <div class="links-section">
+            <h2>Bağlantılar</h2>
+            <div class="button-container">
+                <a href="https://trello.com/b/hDzz9S3C/guncel-konular" target="_blank" class="btn">Trello Proje Yönetimi</a>
+                <a href="/apk/ShapesAndNumbers.apk" download class="btn">Android APK İndir</a>
+                <button id="downloadAllBtn" class="btn">Tüm Belgeleri İndir</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Tasarım ve Geliştirme: Eray Çelik</p>
+</footer>
+
+<script>
+    document.getElementById("downloadAllBtn").addEventListener("click", function () {
+        // İndirilecek belgelerin listesi
+        const files = [
+            "/documents/gant.jpeg",
+            "/documents/lessons_1_20241113210805.xlsx",
+            "/documents/SAAS.pdf",
+            "/documents/SWOT.pdf",
+            "/documents/THS.pdf",
+            "/documents/uml.png"
+        ];
+
+        // Her bir dosya için bir indirme işlemi başlat
+        files.forEach(file => {
+            const link = document.createElement("a");
+            link.href = file;
+            link.download = file.split('/').pop(); // Dosya adını ayıkla
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    });
+</script>
+
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/functions.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kayıt Ol - Social Template</title>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Webestica.com">
+    <meta name="description" content="Register Page using Social Theme">
+
+    <!-- Dark mode -->
+    <script>
+        const storedTheme = localStorage.getItem('theme');
+        const getPreferredTheme = () => storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const setTheme = theme => document.documentElement.setAttribute('data-bs-theme', theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme);
+        setTheme(getPreferredTheme());
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const theme = toggle.getAttribute('data-bs-theme-value');
+                    localStorage.setItem('theme', theme);
+                    setTheme(theme);
+                });
+            });
+        });
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body class="bg-primary">
+<main>
+    <!-- Main content START -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
+            <div class="text-center mb-4">
+                <h3 class="mb-0">Kayıt Ol</h3>
+                <p class="text-muted">Asal sayılarla ilgili AR oyunumuz için bir hesap oluşturun!</p>
+            </div>
+            <form action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Adınız</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Adınız" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Adresiniz</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Adresiniz" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Şifreniz</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifreniz" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
+                </div>
+            </form>
+            <div class="text-center mt-3">
+                <p class="mb-0">Zaten bir hesabınız var mı? <a href="/login" class="text-decoration-none">Giriş Yap</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Main content END -->
+</main>
+</body>
+
+</html>
