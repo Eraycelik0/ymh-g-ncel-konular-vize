@@ -8,23 +8,28 @@ const path = require("path");
 const app = express();
 
 // Statik Dosyalar
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // MongoDB Bağlantısı
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("MongoDB connected"))
-    .catch(err => console.error("MongoDB connection error:", err));
+    .then(() => console.log("MongoDB bağlantısı başarılı"))
+    .catch(err => console.error("MongoDB bağlantı hatası:", err));
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(session({ secret: "secret", resave: false, saveUninitialized: true }));
+app.use(session({
+    secret: process.env.SESSION_SECRET || "secret",
+    resave: false,
+    saveUninitialized: true
+}));
 app.use(flash());
 
 // Flash Message Middleware
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash("success_msg");
     res.locals.error_msg = req.flash("error_msg");
+    res.locals.user = req.session.user || null; // Kullanıcıyı her template'te erişilebilir yapar
     next();
 });
 
