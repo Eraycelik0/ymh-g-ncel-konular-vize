@@ -30,10 +30,9 @@ Bu projede kullanılan kaynaklara ve dosyalara aşağıdaki bağlantılardan ula
 
 ### Dokümanlar / Documents
 - [Gantt Şeması](public/documents/gant.jpeg)
-- [Ders Planı (Excel)](public/documents/lessons_1_20241113210805.xlsx)
+- [Teknoloji Hazırlık Seviyesi (THS) 7 Belgesi](public/documents/lessons_1_20241113210805.xlsx)
 - [SAAS Analizi](public/documents/SAAS.pdf)
 - [SWOT Analizi](public/documents/SWOT.pdf)
-- [Teknoloji Hazırlık Seviyesi (THS) 7 Belgesi](public/documents/THS.pdf)
 - [Use Case Diagramı](public/documents/uml.png)
 
 ### Görseller / Images
