@@ -63,7 +63,7 @@ Bu projede kullanılan kaynaklara ve dosyalara aşağıdaki bağlantılardan ula
 ### **1. Hafta**
 - Proje fikri belirlendi: **Shapes and Numbers AR**.  
   Çocuklara sayılar ve şekilleri öğretmek için artırılmış gerçeklik (AR) destekli bir proje tasarımı oluşturuldu.
-- Trello panosu oluşturuldu: [Trello Panosu](https://trello.com/b/example)
+- Trello panosu oluşturuldu: [Trello Panosu](https://trello.com/b/hDzz9S3C/guncel-konular)
 
 ---
 
