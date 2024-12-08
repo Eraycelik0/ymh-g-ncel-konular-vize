@@ -1,3 +1,6 @@
+## *Proje Adı:* *Shapes and Numbers AR Project*
+*Eray Çelik - 220541302*
+
 # Shapes and Numbers AR Project
 
 ## Projenin Amacı / Purpose of the Project
