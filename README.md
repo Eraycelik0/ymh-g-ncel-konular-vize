@@ -106,4 +106,4 @@ Bu projede kullanılan kaynaklara ve dosyalara aşağıdaki bağlantılardan ula
 - Görev modülü eklendi.  
   Çocukların eğlenerek öğrenmesini desteklemek için görevler ve ödül sistemi geliştirildi.
 - Uygulama son testlerden geçirildi ve APK hazırlandı:  
-  [ShapesAndNumbers Android APK](public/apk/ShapesAndNumbers.apk)
+  [ShapesAndNumbers Android APK](public/apk/ShapesAndNumbersV5.apk)
