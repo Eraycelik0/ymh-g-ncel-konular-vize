@@ -29,7 +29,7 @@ This project aims to provide basic knowledge about numbers and shapes to childre
 Bu projede kullanılan kaynaklara ve dosyalara aşağıdaki bağlantılardan ulaşabilirsiniz:
 
 ### APK Dosyaları / APK Files
-- [ShapesAndNumbers Android APK](public/apk/ShapesAndNumbers.apk)
+- [ShapesAndNumbers Android APK](public/apk/ShapesAndNumbersV7.apk)
 
 ### Dokümanlar / Documents
 - [Gantt Şeması](public/documents/gant.jpeg)
@@ -106,4 +106,4 @@ Bu projede kullanılan kaynaklara ve dosyalara aşağıdaki bağlantılardan ula
 - Görev modülü eklendi.  
   Çocukların eğlenerek öğrenmesini desteklemek için görevler ve ödül sistemi geliştirildi.
 - Uygulama son testlerden geçirildi ve APK hazırlandı:  
-  [ShapesAndNumbers Android APK](public/apk/ShapesAndNumbersV5.apk)
+  [ShapesAndNumbers Android APK](public/apk/ShapesAndNumbersV7.apk)
